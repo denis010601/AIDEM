@@ -8,7 +8,7 @@ const clear = require('./tasks/clear.js');
 const pug = require('./tasks/pug.js');
 const scss = require('./tasks/scss.js');
 const img = require('./tasks/img.js');
-
+const font = require('./tasks/font.js');
 
 // server
 const server = () => {
@@ -28,9 +28,10 @@ const watcher = () => {
 exports.pug = pug;
 exports.scss = scss;
 exports.img = img;
+exports.font = font;
 //Сорка
 exports.dev = series (
   clear,
-  parallel(pug, scss, img),
+  parallel(pug, scss, img, font),
   parallel(watcher, server)
 );
