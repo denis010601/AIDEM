@@ -1,162 +1,377 @@
 //  Основные цвета макета
 $white : #fff
-$black : #333
+$gray : #333333
 $bardo: #7A1B1B
 $purple: #C79791
 $black: #31353A
 $darkGray: #777
 // Подключение шрифтов 
-    @font-face 
+
+@font-face 
     font-family: 'Baron Neue'
-    src: local('Baron Neue'), local('BaronNeue'), url('baronneue.woff2') format('woff2'), url('baronneue.woff') format('woff'), url('baronneue.ttf') format('truetype')
+    
+    src: local('Baron Neue'), local('BaronNeue'), url('../font/baronneue/baronneue.woff2') format('woff2'), url('../font/baronneue/baronneue.woff') format('woff'), url('../font/baronneue/baronneue.ttf') format('truetype')
     font-weight: 400
+    unicode-range: U+005F-007E, U+004B, U+0430-0451, U+041B,U+002D
     font-style: normal
 
 @font-face 
     font-family: 'Baron Neue'
-    src: local('Baron Neue Italic'), local('BaronNeueItalic'), url('baronneueitalic.woff2') format('woff2'), url('baronneueitalic.woff') format('woff'), url('baronneueitalic.ttf') format('truetype')
+    
+    src: local('Baron Neue Italic'), local('BaronNeueItalic'), url('../font/baronneue/baronneueitalic.woff2') format('woff2'), url('../font/baronneue/baronneueitalic.woff') format('woff'), url('../font/baronneue/baronneueitalic.ttf') format('truetype')
     font-weight: 400
     font-style: italic
 
 @font-face 
     font-family: 'Baron Neue'
-    src: local('Baron Neue Bold'), local('BaronNeueBold'), url('baronneuebold.woff2') format('woff2'), url('baronneuebold.woff') format('woff'), url('baronneuebold.ttf') format('truetype')
+    
+    src: local('Baron Neue Bold'), local('BaronNeueBold'), url('../font/baronneue/baronneuebold.woff2') format('woff2'), url('../font/baronneue/baronneuebold.woff') format('woff'), url('../font/baronneue/baronneuebold.ttf') format('truetype')
     font-weight: 700
     font-style: normal
 
 @font-face 
     font-family: 'Baron Neue'
-    src: local('Baron Neue Bold Italic'), local('BaronNeueBoldItalic'), url('baronneuebolditalic.woff2') format('woff2'), url('baronneuebolditalic.woff') format('woff'), url('baronneuebolditalic.ttf') format('truetype')
+    
+    src: local('Baron Neue Bold Italic'), local('BaronNeueBoldItalic'), url('../font/baronneue/baronneuebolditalic.woff2') format('woff2'), url('../font/baronneue/baronneuebolditalic.woff') format('woff'), url('../font/baronneue/baronneuebolditalic.ttf') format('truetype')
     font-weight: 700
     font-style: italic
 
 @font-face 
     font-family: 'Baron Neue'
-    src: local('Baron Neue Black'), local('BaronNeueBlack'), url('baronneueblack.woff2') format('woff2'), url('baronneueblack.woff') format('woff'), url('baronneueblack.ttf') format('truetype')
+    
+    src: local('Baron Neue Black'), local('BaronNeueBlack'), url('../font/baronneue/baronneueblack.woff2') format('woff2'), url('../font/baronneue/baronneueblack.woff') format('woff'), url('../font/baronneue/baronneueblack.ttf') format('truetype')
     font-weight: 900
     font-style: normal
 
 @font-face 
     font-family: 'Baron Neue'
-    src: local('Baron Neue Black Italic'), local('BaronNeueBlackItalic'), url('baronneueblackitalic.woff2') format('woff2'), url('baronneueblackitalic.woff') format('woff'), url('baronneueblackitalic.ttf') format('truetype')
+    
+    src: local('Baron Neue Black Italic'), local('BaronNeueBlackItalic'), url('../font/baronneue/baronneueblackitalic.woff2') format('woff2'), url('../font/baronneue/baronneueblackitalic.woff') format('woff'), url('../font/baronneue/baronneueblackitalic.ttf') format('truetype')
     font-weight: 900
     font-style: italic
 //  Шрифт Lato
 @font-face 
     font-family: 'Lato'
-    src: local('Lato Hairline'), local('Lato-Hairline'), url('latohairline.woff2') format('woff2'), url('latohairline.woff') format('woff'), url('latohairline.ttf') format('truetype')
+    src: local('Lato Hairline'), local('Lato-Hairline'), url('../font/lato/latohairline.woff2') format('woff2'), url('../font/lato/latohairline.woff') format('woff'), url('../font/lato/latohairline.ttf') format('truetype')
     font-weight: 100
     font-style: normal
 
 @font-face 
     font-family: 'Lato'
-    src: local('Lato Hairline Italic'), local('Lato-HairlineItalic'), url('latohairlineitalic.woff2') format('woff2'), url('latohairlineitalic.woff') format('woff'), url('latohairlineitalic.ttf') format('truetype')
+    src: local('Lato Hairline Italic'), local('Lato-HairlineItalic'), url('../font/lato/latohairlineitalic.woff2') format('woff2'), url('../font/lato/latohairlineitalic.woff') format('woff'), url('../font/lato/latohairlineitalic.ttf') format('truetype')
     font-weight: 100
     font-style: italic
 
 @font-face 
     font-family: 'Lato'
-    src: local('Lato Thin'), local('Lato-Thin'), url('latothin.woff2') format('woff2'), url('latothin.woff') format('woff'), url('latothin.ttf') format('truetype')
+    src: local('Lato Thin'), local('Lato-Thin'), url('../font/lato/latothin.woff2') format('woff2'), url('../font/lato/latothin.woff') format('woff'), url('../font/lato/latothin.ttf') format('truetype')
     font-weight: 200
     font-style: normal
 
 @font-face 
     font-family: 'Lato'
-    src: local('Lato Thin Italic'), local('Lato-ThinItalic'), url('latothinitalic.woff2') format('woff2'), url('latothinitalic.woff') format('woff'), url('latothinitalic.ttf') format('truetype')
+    src: local('Lato Thin Italic'), local('Lato-ThinItalic'), url('../font/lato/latothinitalic.woff2') format('woff2'), url('../font/lato/latothinitalic.woff') format('woff'), url('../font/lato/latothinitalic.ttf') format('truetype')
     font-weight: 200
     font-style: italic
 
 @font-face 
     font-family: 'Lato'
-    src: local('Lato Light'), local('Lato-Light'), url('latolight.woff2') format('woff2'), url('latolight.woff') format('woff'), url('latolight.ttf') format('truetype')
+    src: local('Lato Light'), local('Lato-Light'), url('../font/lato/latolight.woff2') format('woff2'), url('../font/lato/latolight.woff') format('woff'), url('../font/lato/latolight.ttf') format('opentype')
     font-weight: 300
     font-style: normal
 
 @font-face 
     font-family: 'Lato'
-    src: local('Lato Light Italic'), local('Lato-LightItalic'), url('latolightitalic.woff2') format('woff2'), url('latolightitalic.woff') format('woff'), url('latolightitalic.ttf') format('truetype')
+    src: local('Lato Light Italic'), local('Lato-LightItalic'), url('../font/lato/latolightitalic.woff2') format('woff2'), url('../font/lato/latolightitalic.woff') format('woff'), url('../font/lato/latolightitalic.ttf') format('truetype')
     font-weight: 300
     font-style: italic
 
 @font-face 
     font-family: 'Lato'
-    src: local('Lato Regular'), local('Lato-Regular'), url('latoregular.woff2') format('woff2'), url('latoregular.woff') format('woff'), url('latoregular.ttf') format('truetype')
+    src: local('Lato Regular'), local('Lato-Regular'), url('../font/lato/latoregular.woff2') format('woff2'), url('../font/lato/latoregular.woff') format('woff'), url('../font/lato/latoregular.ttf') format('truetype')
     font-weight: 400
     font-style: normal
 
 @font-face 
     font-family: 'Lato'
-    src: local('Lato Italic'), local('Lato-Italic'), url('latoitalic.woff2') format('woff2'), url('latoitalic.woff') format('woff'), url('latoitalic.ttf') format('truetype')
+    src: local('Lato Italic'), local('Lato-Italic'), url('../font/lato/latoitalic.woff2') format('woff2'), url('../font/lato/latoitalic.woff') format('woff'), url('../font/lato/latoitalic.ttf') format('truetype')
     font-weight: 400
     font-style: italic
 
 @font-face 
     font-family: 'Lato'
-    src: local('Lato Medium'), local('Lato-Medium'), url('latomedium.woff2') format('woff2'), url('latomedium.woff') format('woff'), url('latomedium.ttf') format('truetype')
+    src: local('Lato Medium'), local('Lato-Medium'), url('../font/lato/latomedium.woff2') format('woff2'), url('../font/lato/latomedium.woff') format('woff'), url('../font/lato/latomedium.ttf') format('truetype')
     font-weight: 500
     font-style: normal
 
 @font-face 
     font-family: 'Lato'
-    src: local('Lato Medium Italic'), local('Lato-MediumItalic'), url('latomediumitalic.woff2') format('woff2'), url('latomediumitalic.woff') format('woff'), url('latomediumitalic.ttf') format('truetype')
+    src: local('Lato Medium Italic'), local('Lato-MediumItalic'), url('../font/lato/latomediumitalic.woff2') format('woff2'), url('../font/lato/latomediumitalic.woff') format('woff'), url('../font/lato/latomediumitalic.ttf') format('truetype')
     font-weight: 500
     font-style: italic
 
 @font-face 
     font-family: 'Lato'
-    src: local('Lato Semibold'), local('Lato-Semibold'), url('latosemibold.woff2') format('woff2'), url('latosemibold.woff') format('woff'), url('latosemibold.ttf') format('truetype')
+    src: local('Lato Semibold'), local('Lato-Semibold'), url('../font/lato/latosemibold.woff2') format('woff2'), url('../font/lato/latosemibold.woff') format('woff'), url('../font/lato/latosemibold.ttf') format('truetype')
     font-weight: 600
     font-style: normal
 
 @font-face 
     font-family: 'Lato'
-    src: local('Lato Semibold Italic'), local('Lato-SemiboldItalic'), url('latosemibolditalic.woff2') format('woff2'), url('latosemibolditalic.woff') format('woff'), url('latosemibolditalic.ttf') format('truetype')
+    src: local('Lato Semibold Italic'), local('Lato-SemiboldItalic'), url('../font/lato/latosemibolditalic.woff2') format('woff2'), url('../font/lato/latosemibolditalic.woff') format('woff'), url('../font/lato/latosemibolditalic.ttf') format('truetype')
     font-weight: 600
     font-style: italic
 
 @font-face 
     font-family: 'Lato'
-    src: local('Lato Bold'), local('Lato-Bold'), url('latobold.woff2') format('woff2'), url('latobold.woff') format('woff'), url('latobold.ttf') format('truetype')
+    src: local('Lato Bold'), local('Lato-Bold'), url('../font/lato/latobold.woff2') format('woff2'), url('../font/lato/latobold.woff') format('woff'), url('../font/lato/latobold.ttf') format('truetype')
     font-weight: 700
     font-style: normal
 
 @font-face 
     font-family: 'Lato'
-    src: local('Lato Bold Italic'), local('Lato-BoldItalic'), url('latobolditalic.woff2') format('woff2'), url('latobolditalic.woff') format('woff'), url('latobolditalic.ttf') format('truetype')
+    src: local('Lato Bold Italic'), local('Lato-BoldItalic'), url('../font/lato/latobolditalic.woff2') format('woff2'), url('../font/lato/latobolditalic.woff') format('woff'), url('../font/lato/latobolditalic.ttf') format('truetype')
     font-weight: 700
     font-style: italic
 
 @font-face 
     font-family: 'Lato'
-    src: local('Lato Heavy'), local('Lato-Heavy'), url('latoheavy.woff2') format('woff2'), url('latoheavy.woff') format('woff'), url('latoheavy.ttf') format('truetype')
+    src: local('Lato Heavy'), local('Lato-Heavy'), url('../font/lato/latoheavy.woff2') format('woff2'), url('../font/lato/latoheavy.woff') format('woff'), url('../font/lato/latoheavy.ttf') format('truetype')
     font-weight: 800
     font-style: normal
 
 @font-face 
     font-family: 'Lato'
-    src: local('Lato Heavy Italic'), local('Lato-HeavyItalic'), url('latoheavyitalic.woff2') format('woff2'), url('latoheavyitalic.woff') format('woff'), url('latoheavyitalic.ttf') format('truetype')
+    src: local('Lato Heavy Italic'), local('Lato-HeavyItalic'), url('../font/lato/latoheavyitalic.woff2') format('woff2'), url('../font/lato/latoheavyitalic.woff') format('woff'), url('../font/lato/latoheavyitalic.ttf') format('truetype')
     font-weight: 800
     font-style: italic
 
 @font-face 
     font-family: 'Lato'
-    src: local('Lato Black'), local('Lato-Black'), url('latoblack.woff2') format('woff2'), url('latoblack.woff') format('woff'), url('latoblack.ttf') format('truetype')
+    src: local('Lato Black'), local('Lato-Black'), url('../font/lato/latoblack.woff2') format('woff2'), url('../font/lato/latoblack.woff') format('woff'), url('../font/lato/latoblack.ttf') format('truetype')
     font-weight: 900
     font-style: normal
 
 @font-face 
     font-family: 'Lato'
-    src: local('Lato Black Italic'), local('Lato-BlackItalic'), url('latoblackitalic.woff2') format('woff2'), url('latoblackitalic.woff') format('woff'), url('latoblackitalic.ttf') format('truetype')
+    src: local('Lato Black Italic'), local('Lato-BlackItalic'), url('../font/lato/latoblackitalic.woff2') format('woff2'), url('../font/lato/latoblackitalic.woff') format('woff'), url('../font/lato/latoblackitalic.ttf') format('truetype')
     font-weight: 900
     font-style: italic
 
 
 
 // сброс нескольких настроек
+*
+    box-sizing: border-box
+body::-webkit-scrollbar 
+  display: none
 
-*, *::before, *::after 
-    box-sizing: border-box    
+
+/* Hide scrollbar for IE, Edge and Firefox */
+body 
+  -ms-overflow-style: none
+  scrollbar-width: none
 
 body
     margin: 0
     padding: 0
+
+h1,h2,h3,h4,h5,h6,p,ul,li
+    margin: 0
+    padding: 0
+    list-style: none
+
+// контейнер, сетка и доп блоки
+.container  
+    width: 100%
+    max-width: 1200px
+    margin: 0 auto
+    position: relative
+.row
+    display: flex
+// Заголовки
+.title
+    font-family: "Baron Neue"
+    color: $gray
+    
+    &-h1
+        font-size: 36px
+        line-height: 44px
+// секции
+.header
+    padding: 68px 0 58px 
+    &__title
+        max-width: 527px
+.hero
+    padding: 68px 0 0
+    background: #f4f5f5
+    &__link
+        display: none
+    &__row
+        flex-wrap: wrap
+        justify-content: space-between
+// блоки
+.presentation
+    max-width: 496px
+    width: 100%
+    position: relative
+    top: 49px
+    &-list
+        display: flex
+        justify-content: space-between
+        width: 100%
+    &-item
+        display: flex
+        align-items: flex-end
+        justify-content: center
+        width: 232px
+        height: 210px
+        background: #484848
+        position: relative
+        color: $white
+        font-family: 'Lato'
+        font-style: normal
+        font-weight: 400
+        font-size: 16px
+        line-height: 20px
+        overflow: hidden
+        text-align: center
+        &:first-child
+            background: #C79791
+        & span
+            display: flex
+            align-items: center
+            justify-content: center
+            height: 60%
+            max-width: 182px
+            
+    &-img
+        position: absolute
+        &--big
+            position: relative
+            display: block
+            width: 32vw
+            min-width: 496px
+            max-width: 615px
+            height: 480px
+            background-color: #484848
+            margin-bottom: 30px
+            position: relative
+            margin-top: -295px
+            & img
+                position: absolute
+                right: 0
+.edge
+    max-width: 572px
+    width: 100%
+    display: flex
+    justify-content: space-between
+    font-family: "Lato"
+    &-list
+        padding-top: 7px
+        
+    &-item
+        display: flex
+        flex-direction: column
+        margin-bottom: 39px
+    &-title
+        font-weight: 700
+        font-size: 30px
+        line-height: 24px
+        margin-bottom: 3px
+        & .sub
+            font-size: 16px
+            line-height: 24px
+        & sup
+            font-size: 9px
+            font-weight: 700
+    &-subtitle
+        font-size: 14px
+        line-height: 26px
+        font-weight: 400     
+    &__desc
+        max-width: 319px
+.desc
+    font-family: 'Lato'
+    font-style: normal
+    font-weight: 400
+    font-size: 16px
+    line-height: 24px
+
+.link
+    font-family: "Baron Neue"
+    color: $bardo
+    text-decoration: none
+    font-size: 16px
+    line-height: 24px
+// media 1100
+@media screen and (max-width: 1084px)
+    .hero
+        padding-top: 50px
+        &__link
+            display: block
+            text-decoration: underline
+            font-size: 18px
+            line-height: 22px
+            margin-bottom: 62px
+            font-weight: 600
+    .header
+        padding-top: 48px   
+        padding-bottom: 40px
+        &__title
+            max-width: 559px
+    .container
+        max-width: 688px
+    .presentation
+        position: static
+        margin-top: 0
+        width: 100%
+        max-width: 100%
+        &-list
+            max-width: 502px
+        
+        &-img
+            &--big
+                min-width: 0
+                margin: 0 0 30px
+                width: 100%
+                max-width: 100%
+                height: 478px
+    .edge 
+        max-width: 615px
+        margin-bottom: 30px
+        &-item:last-child
+            display: none
+        &__desc
+            font-weight: 700
+@media screen and (max-width: 768px)
+    .container
+        max-width: 350px
+    .presentation
+        &-item
+            width: 166px
+            height: 180px
+            font-size: 16px
+            line-height: 20px
+        &-img
+            width: 100%
+            position: absolute
+            top: 0
+            left: 0
+            &--big
+                margin-bottom: 14px
+                height: 337px
+                & img
+                    height: 100%
+    .hero__link
+        font-size: 16px
+        line-height: 120%       
+    .edge
+        flex-direction: column
+        &-list
+            display: flex
+            justify-content: space-between
+            flex-wrap: wrap
+        &__desc
+            width: 100%
+            max-width: 100%

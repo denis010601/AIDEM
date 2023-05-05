@@ -1,5 +1,5 @@
 doctype html
-html(lang="en")
+html(lang="ru")
     head
         meta(charset="UTF-8")
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
@@ -9,36 +9,43 @@ html(lang="en")
     body
         header.header
             .container
-                h1 Knightsbridge private park – элитный район Лондона в центре  
+                h1.title.title-h1.header__title Knightsbridge private park - элитный район Лондона в центре  
         main
             section.hero
-                .container.row
-                    .col
+                .container.row.hero__row
+                    .col.edge.hero__edge
                         ul.edge-list
                             li.edge-item
-                                span.title-list 156 - 636 м2
-                                span.title-subtitle Площадь квартир
+                                span.edge-title.text--black 156 - 636
+                                    span.sub м
+                                        sup 2
+                                span.edge-subtitle.text--gray Площадь квартир
                             li.edge-item
-                                span.title-list 475
-                                span.title-subtitle Парковочных мест
+                                span.edge-title.text--black 475
+                                span.edge-subtitle.text--gray Парковочных мест
                             li.edge-item
-                                span.title-list 10 мин
-                                span.title-subtitle До метро Фрунзенская
+                                span.edge-title.text--black 10 
+                                    span.sub мин
+                                span.edge-subtitle.text--gray До метро Фрунзенская
                             li.edge-item
-                                span.title-list 2 га
-                                span.title-subtitle Площадь собственного парка
-                        p.desc.edge__desc
+                                span.edge-title.text--black 2 
+                                    span.sub га
+                                span.edge-subtitle.text--gray Площадь собственного парка
+                        p.desc.edge__desc.text--black
                             | Жилой комплекс из четырех клубных домов класса де-люкс в английском стиле, расположенный в собственном парке площадью 3 га в районе Хамовники. Авторы интерьеров жилого копмлекса,и дизайна частного парка – дизайнеры мировой величины. Так, общественные зоны оформляет Дэвид Линли, племянник королевы Великобритании и глава компании LINLEY, а настоящий английский парк для жителей
-                    .col
-                        a(href="") Узнать подробнее
-                    .col
-                        picture 
+   
+                    a.link.hero__link(href="") узнать подробнее
+                    .col.presentation
+                        picture.presentation-img--big
+                            source(srcset="img/zaglushkaT.svg" media="min-width: 375px")
+                            source(srcset="img/zaglushkaD.svg" media="(min-width: 768px)")
+                            img(src="img/zaglushkaM.svg", alt="")
                         ul.presentation-list
-                            li.resentation-item
-                                img.resentation-img(src="", alt="")
+                            li.presentation-item
+                                img.presentation-img(src="img/present-img.png", alt="")
                                 span Презентация ЖК Knightsbridge Private Рark
-                            li.resentation-item
-                                img.resentation-img(src="", alt="")
+                            li.presentation-item
+                                img.presentation-img(src="img/present-img.png", alt="")
                                 span Типы планировок апартаментов
             section.maps 
                 .container.row
