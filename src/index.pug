@@ -3,7 +3,7 @@ html(lang="ru")
     head
         meta(charset="UTF-8")
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
-        meta(name="viewport", content="width=device-width, initial-scale=(1.0)")
+        meta(name="viewport", content="width=device-width, initial-scale=1")
         title Тестовое задание
         link(rel="stylesheet", href="css/main.css")
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
@@ -38,8 +38,8 @@ html(lang="ru")
                     a.link.hero__link(href="") узнать подробнее
                     .col.presentation
                         picture.presentation-img--big
+                            source(srcset="img/zaglushkaD.svg" media="(min-width: 968px)")
                             source(srcset="img/zaglushkaT.svg" media="(min-width: 501px)")
-                            source(srcset="img/zaglushkaD.svg" media="(min-width: 568px)")
                             img(src="img/zaglushkaM.svg", alt="")
                         ul.presentation-list
                             li.presentation-item
