@@ -34,5 +34,10 @@ module.exports = {
     src: pathSrc + "/font/**/*.*",
     watch: pathSrc + "/font/**/*.*",
     dest: pathDest + "/font"
+  },
+  js: {
+    src: pathSrc + "/js/**/*.js",
+    watch: pathSrc + "/js/**/*.js",
+    dest: pathDest + "/js"
   }
 }

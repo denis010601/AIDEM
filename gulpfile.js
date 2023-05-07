@@ -9,6 +9,7 @@ const pug = require('./tasks/pug.js');
 const scss = require('./tasks/scss.js');
 const img = require('./tasks/img.js');
 const font = require('./tasks/font.js');
+const js = require('./tasks/js.js');
 
 // server
 const server = () => {
@@ -22,9 +23,9 @@ const server = () => {
 const watcher = () => {
   watch(path.pug.watch, pug).on("all", browerSync.reload);
   watch(path.scss.watch, scss).on("all", browerSync.reload);
-  
+  watch(path.js.watch, js).on("all", browerSync.reload);
 }
-
+exports.js = js;
 exports.pug = pug;
 exports.scss = scss;
 exports.img = img;
@@ -32,6 +33,6 @@ exports.font = font;
 //Сорка
 exports.dev = series (
   clear,
-  parallel(pug, scss, img, font),
+  parallel(pug, js, scss, img, font),
   parallel(watcher, server)
 );

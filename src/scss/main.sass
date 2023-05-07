@@ -159,6 +159,16 @@ $darkGray: #777
     font-style: italic
 
 
+@keyframes pop
+    0%
+        transition: 1s
+        transform: scale(1.4)
+    50%
+        transition: 1s
+        transform: scale(1.2)
+
+
+        
 
 // сброс нескольких настроек
 *
@@ -197,6 +207,12 @@ h1,h2,h3,h4,h5,h6,p,ul,li
     &-h1
         font-size: 36px
         line-height: 44px
+    &-h2
+        font-size: 36px
+        line-height: 44px
+    &-h3
+        font-size: 22px
+        line-height: 30px
 // секции
 .header
     padding: 68px 0 58px 
@@ -210,6 +226,182 @@ h1,h2,h3,h4,h5,h6,p,ul,li
     &__row
         flex-wrap: wrap
         justify-content: space-between
+.maps
+    padding: 190px 0 103px
+    
+    &-icon
+        position: absolute
+        background: $purple
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 36px
+        height: 36px
+        border-radius: 100%
+        z-index: 5
+        transition: 0.2s
+        &__jiraf
+            position: absolute
+            background: $purple
+            display: flex
+            align-items: center
+            justify-content: center
+            width: 41px
+            height: 43px
+            border-radius: 100%
+            z-index: 5
+            transition: 0.2s
+            top: 179px
+            left: 515px
+            &::after  
+                position: absolute
+                z-index: -12
+                content: ""
+                height: 11px
+                width: 44px
+                top: 40px
+                left: 0px
+                border-radius: 100%
+                background: rgba(0, 0, 0, 0.15)
+            &::before
+                z-index: -10
+                position: absolute
+                content: ""
+                bottom: -11%
+                left: 25%
+                width: 52%
+                height: 52%
+                background: $purple
+                transform: rotate(45deg)
+        &.active
+            transform: scale(1.4)
+            background: #7A1B1B
+            transition: 0.2s
+            animation-name: pop
+            animation-duration: 1.5s  
+            animation-iteration-count: infinite
+            animation-direction: alternate-reverse
+        &::before  
+            position: absolute
+            z-index: -10
+            content: ""
+            height: 11px
+            width: 44px
+            top: 30px
+            left: -4px
+            border-radius: 100%
+            background: rgba(0, 0, 0, 0.15)
+        &::after
+            position: absolute
+            z-index: -10
+            content: ""
+            height: 46px
+            width: 46px
+            top: -5px
+            left: -5px
+            border-radius: 100%
+            background: rgba(199, 151, 145, 0.76)
+        &:nth-child(1)
+            top: 97px
+            left: 300px
+        &:nth-child(2)
+            top: 172px
+            right: 401px 
+        &:nth-child(3)
+            bottom: 60px
+            right: 374px     
+        &:nth-child(4)
+            top: 155px
+            left: 253px    
+        &:nth-child(5)
+            top: 114px
+            left: 473px
+        &:nth-child(6)
+            top: 66px
+            right: 528px
+        &:nth-child(7)
+            bottom: 105px
+            right: 284px
+        &:nth-child(8)
+            top: 231px
+            left: 243px    
+        &:nth-child(9)
+            top: 278px
+            right: 181px 
+        &:nth-child(10)
+            top: 207px
+            left: 331px  
+        &:nth-child(11)
+            top: 93px
+            right: 467px    
+        &:nth-child(12)
+            top: 64px
+            right: 335px
+        &:nth-child(13)
+            top: 191px
+            right: 492px
+        &:nth-child(14)
+            top: 152px
+            right: 548px
+        &:nth-child(15)
+            bottom: 32px
+            right: 492px 
+        &:nth-child(16)
+            bottom: 147px
+            left: 388px
+  
+    &__row
+        justify-content: space-between
+    &__title
+        margin-bottom: 33px
+    &-item
+        margin-bottom: 16px
+    &-btn
+        display: flex
+        align-items: center
+        justify-content: center
+        height: 30px
+        background: none
+        border: 1px solid #C79791
+        border-radius: 20px
+        padding: 0 20px
+        font-family: 'Lato'
+        font-style: normal
+        font-weight: 400
+        font-size: 11px
+        line-height: 36px
+        color: #303030
+        cursor: pointer
+        &.active, &:hover
+            background: #C79791
+            color: $white
+            & .qty
+                color: $white
+
+        & .qty
+            width: auto
+            margin-left: 6px
+            color: #7A1B1B
+            font-weight: 700
+            line-height: 26px
+    &__col
+        width: 77.5%
+    &-overlay
+        position: relative
+        margin-top: 10px
+        width: 100%
+        height: 450px
+        background: pink
+        overflow: hidden
+            
+    &-img
+        position: absolute
+        top: 0
+        left: -110px
+        width: 1150px
+        height: 450px
+        background-image: url("../img/maps.png")
+
 // блоки
 .presentation
     max-width: 496px
@@ -305,6 +497,28 @@ h1,h2,h3,h4,h5,h6,p,ul,li
     font-size: 16px
     line-height: 24px
 // media 1100
+.footer
+    padding-top: 50px
+    &__title
+        margin-bottom: 3px
+    &__subtitle
+        margin-bottom: 33px
+.my-swiper-button-prev, .my-swiper-button-next
+    display: block
+    width: 20px
+    height: 20px
+    background-image: url(../img/layer.svg)
+    background-repeat: no-repeat
+    background-size: contain
+    position: absolute
+    cursor: pointer
+.my-swiper-button-prev
+    top: 15px
+    right: 185px    
+.my-swiper-button-next
+    transform: rotate(180deg)
+    top: 15px
+    right: 150px
 @media screen and (max-width: 1084px)
     .hero
         padding-top: 50px
@@ -344,13 +558,88 @@ h1,h2,h3,h4,h5,h6,p,ul,li
             display: none
         &__desc
             font-weight: 700
+    .maps
+        padding-top: 93px
+        padding-bottom: 100px
+        &__title
+            margin-bottom: 25px
+        &__row
+            flex-direction: column
+        &-list  
+            display: flex
+            flex-wrap: wrap
+            margin-bottom: 10px
+        &-item
+            margin-right: 10px
+            margin-bottom: 10px
+        &__col
+            width: 100%
+        &-overlay
+            height: 450px
+        &-img
+            left: -234px
+.hang
+    padding-left: 4px
+    width: 113%
+    &-list
+        display: flex
+    &__number
+        color: $purple
+        font-size: 100px
+        font-weight: 700
+        font-family: "Baron Neue"
+        opacity: 0.3
+        position: relative
+        left: -8px
+
+        &::before
+            content: ""
+            position: absolute
+            z-index: 10
+            background: #fff
+            bottom: 0
+            left: 0
+            width: 100%
+            height: 25px
+    &__title
+        margin-top: -13px
+        margin-bottom: 20px
+    &__desc
+        max-width: 285px
+        margin-bottom: 25px
+    &__link
+        font-family: "lato"
+.footer
+    padding-top: 50px
+    padding-bottom: 40px
+    &__title
+        margin-bottom: 3px
+    &__subtitle
+        margin-bottom: 43px
+.my-swiper-button-prev, .my-swiper-button-next
+    display: block
+    width: 20px
+    height: 20px
+    background-image: url(../img/layer.svg)
+    background-repeat: no-repeat
+    background-size: contain
+    position: absolute
+    cursor: pointer
+.my-swiper-button-prev
+    top: 15px
+    right: 185px    
+.my-swiper-button-next
+    transform: rotate(180deg)
+    top: 15px
+    right: 150px
 @media screen and (max-width: 768px)
+    .maps
+
     .container
-        max-width: 350px
+        max-width: 688px
     .presentation
         &-item
-            width: 166px
-            height: 180px
+       
             font-size: 16px
             line-height: 20px
         &-img
@@ -359,19 +648,66 @@ h1,h2,h3,h4,h5,h6,p,ul,li
             top: 0
             left: 0
             &--big
-                margin-bottom: 14px
-                height: 337px
                 & img
-                    height: 100%
-    .hero__link
-        font-size: 16px
-        line-height: 120%       
+                    height: 100%    
+    
+    .footer
+        padding-top: 10px
+        &__title
+            margin-bottom: 3px
+        &__subtitle
+            margin-bottom: 83px
+@media screen and (max-width: 500px)
+    .title
+        &-h1
+            font-size: 32px
+            line-height: 44px
+    .header
+        &__title
+            margin-bottom: 35px
+    .hero
+        padding-top: 41px
+    .container
+        max-width: 347px
     .edge
-        flex-direction: column
+        &-item
+            margin-bottom: 26px
         &-list
             display: flex
-            justify-content: space-between
             flex-wrap: wrap
-        &__desc
-            width: 100%
-            max-width: 100%
+            justify-content: space-between
+    .desc
+        font-size: 16px
+        line-height: 24px
+
+    .hero
+        &__edge
+            display: flex
+            flex-direction: column
+        &__link
+            font-size: 16px
+            line-height: 120%
+            margin-bottom: 46px
+    .presentation
+        &-item
+            width: 168px
+            height: 180px
+            & span
+                max-width: 118px
+        &-img
+            &--big
+                width: 100%
+                height: 337px
+                margin-bottom: 16px
+    .maps
+        padding-top: 66px
+        padding-bottom: 20px
+        &__title
+            margin-bottom: 30px
+        &-item
+            margin-bottom: 14px
+        &-img
+            left: -373px
+    .footer
+        &__subtitle
+            margin-bottom: 30px

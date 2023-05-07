@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=(1.0)">
     <title>Тестовое задание</title>
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/main.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
   </head>
   <body>
     <header class="header">
@@ -27,8 +27,8 @@
           </div><a class="link hero__link" href="">узнать подробнее</a>
           <div class="col presentation">
             <picture class="presentation-img--big">
-              <source srcset="img/zaglushkaT.svg" media="min-width: 375px">
-              <source srcset="img/zaglushkaD.svg" media="(min-width: 768px)"><img src="img/zaglushkaM.svg" alt="">
+              <source srcset="img/zaglushkaT.svg" media="(min-width: 501px)">
+              <source srcset="img/zaglushkaD.svg" media="(min-width: 568px)"><img src="img/zaglushkaM.svg" alt="">
             </picture>
             <ul class="presentation-list">
               <li class="presentation-item"><img class="presentation-img" src="img/present-img.png" alt=""><span>Презентация ЖК Knightsbridge Private Рark</span></li>
@@ -38,27 +38,97 @@
         </div>
       </section>
       <section class="maps"> 
-        <div class="container row">
+        <div class="container row maps__row">
           <div class="col">
-            <h2>на карте</h2>
+            <h2 class="title title-h2 maps__title">на карте</h2>
             <ul class="maps-list"> 
-              <li class="maps-item">КРАСОТА И ЗДОРОВЬЕ<span class="qty">7</span></li>
-              <li class="maps-item">МАГАЗИНЫ<span class="qty">7</span></li>
-              <li class="maps-item">ОБУЧЕНИЕ<span class="qty">7</span></li>
-              <li class="maps-item">ДЕТСАД<span class="qty">7</span></li>
-              <li class="maps-item">ОТДЫХ, РАЗВЛЕЧЕНИЯ<span class="qty">7</span></li>
+              <li class="maps-item"> 
+                <button class="maps-btn" data-maps="health">КРАСОТА И ЗДОРОВЬЕ<b class="qty">7</b></button>
+              </li>
+              <li class="maps-item">
+                <button class="maps-btn" data-maps="shop">МАГАЗИНЫ<b class="qty">7</b></button>
+              </li>
+              <li class="maps-item">
+                <button class="maps-btn" data-maps="lerning">ОБУЧЕНИЕ<b class="qty">7</b></button>
+              </li>
+              <li class="maps-item">
+                <button class="maps-btn" data-maps="baby">ДЕТСАД<b class="qty">7</b></button>
+              </li>
+              <li class="maps-item"> 
+                <button class="maps-btn" data-maps="chill">ОТДЫХ, РАЗВЛЕЧЕНИЯ<b class="qty">7</b></button>
+              </li>
             </ul>
           </div>
-          <div class="col">
+          <div class="col maps__col">
             <div class="maps-overlay">
-              <div class="maps-overlay__img"><img class="maps-img" src="" alt=""><img class="maps-icon" src="" alt=""></div>
+              <div class="maps-img">
+                <div class="maps-icon maps-icon__coffe" data-icon="chill"><img src="img/coffee-cup.svg" alt=""></div>
+                <div class="maps-icon maps-icon__coffe" data-icon="chill"><img src="img/coffee-cup.svg" alt=""></div>
+                <div class="maps-icon maps-icon__coffe" data-icon="chill"><img src="img/coffee-cup.svg" alt=""></div>
+                <div class="maps-icon maps-icon__shop" data-icon="shop"><img src="img/shop-cup.svg" alt=""></div>
+                <div class="maps-icon maps-icon__shop" data-icon="shop"><img src="img/shop-cup.svg" alt=""></div>
+                <div class="maps-icon maps-icon__shop" data-icon="shop"><img src="img/shop-cup.svg" alt=""></div>
+                <div class="maps-icon maps-icon__shop" data-icon="shop"><img src="img/shop-cup.svg" alt=""></div>
+                <div class="maps-icon maps-icon__mortarboard" data-icon="lerning"><img src="img/mortarboard.svg" alt=""></div>
+                <div class="maps-icon maps-icon__mortarboard" data-icon="lerning"><img src="img/mortarboard.svg" alt=""></div>
+                <div class="maps-icon maps-icon__video" data-icon=""><img src="img/video-camera.svg" alt="chill"></div>
+                <div class="maps-icon maps-icon__baby" data-icon="baby"><img src="img/baby-face.svg" alt=""></div>
+                <div class="maps-icon maps-icon__baby" data-icon="baby"><img src="img/baby-face.svg" alt=""></div>
+                <div class="maps-icon maps-icon__baby" data-icon="baby"><img src="img/baby-face.svg" alt=""></div>
+                <div class="maps-icon maps-icon__hospital" data-icon="health"><img src="img/hospital-sign.svg" alt=""></div>
+                <div class="maps-icon maps-icon__hospital" data-icon="health"><img src="img/hospital-sign.svg" alt=""></div>
+                <div class="maps-icon maps-icon__lipstick" data-icon="health"><img src="img/lipstick.svg" alt=""></div>
+                <div class="maps-icon__jiraf"><img src="img/jitaf.svg" alt=""></div>
+              </div>
             </div>
           </div>
         </div>
       </section>
     </main>
-    <footer>
-      <div class="container"></div>
-    </footer>
+    <footer class="footer">
+      <div class="container">
+        <div class="swiper hang mySwiper">
+          <h2 class="title title-h2 footer__title">особенности работы</h2>
+          <h3 class="title title-h3 footer__subtitle">компании saffari estate</h3>
+          <div class="hang-list swiper-wrapper">
+            <div class="hang-item swiper-slide"><span class="hang__number">01</span>
+              <h3 class="title title-h3 hang__title">большая база</h3>
+              <p class="desc hang__desc">У нас самая большая база актуальных и эксклюзивных объектов элитной недвижимости</p><a class="link hang__link" href="">Посмотреть</a>
+            </div>
+            <div class="hang-item swiper-slide"><span class="hang__number">02</span>
+              <h3 class="title title-h3 hang__title">надежность</h3>
+              <p class="desc hang__desc">Мы гарантируем абсолютую безопасность и конфиденциальность по сделкам</p><a class="link hang__link" href="">Узнать</a>
+            </div>
+            <div class="hang-item swiper-slide"><span class="hang__number">03</span>
+              <h3 class="title title-h3 hang__title">опыт</h3>
+              <p class="desc hang__desc">Наша команда имеет огромный опыт продаж недвижимости в элитном сегменте</p><a class="link hang__link" href="">Изучить</a>
+            </div>
+            <div class="hang-item swiper-slide"><span class="hang__number">04</span>
+              <h3 class="title title-h3 hang__title">закрытыe</h3>
+              <p class="desc hang__desc">Есть объекты, которые предлагаем только мы</p><a class="link hang__link" href="">Получить</a>
+            </div>
+            <div class="hang-item swiper-slide"><span class="hang__number">01</span>
+              <h3 class="title title-h3 hang__title">большая база</h3>
+              <p class="desc hang__desc">У нас самая большая база актуальных и эксклюзивных объектов элитной недвижимости</p><a class="link hang__link" href="">Посмотреть</a>
+            </div>
+            <div class="hang-item swiper-slide"><span class="hang__number">02</span>
+              <h3 class="title title-h3 hang__title">надежность</h3>
+              <p class="desc hang__desc">Мы гарантируем абсолютую безопасность и конфиденциальность по сделкам</p><a class="link hang__link" href="">Узнать</a>
+            </div>
+            <div class="hang-item swiper-slide"><span class="hang__number">03</span>
+              <h3 class="title title-h3 hang__title">опыт</h3>
+              <p class="desc hang__desc">Наша команда имеет огромный опыт продаж недвижимости в элитном сегменте</p><a class="link hang__link" href="">Изучить</a>
+            </div>
+            <div class="hang-item swiper-slide"><span class="hang__number">04</span>
+              <h3 class="title title-h3 hang__title">закрытыe</h3>
+              <p class="desc hang__desc">Есть объекты, которые предлагаем только мы</p><a class="link hang__link" href="">Получить</a>
+            </div>
+          </div>
+          <div class="my-swiper-button-next"></div>
+          <div class="my-swiper-button-prev"></div>
+        </div>
+      </div>
+    </footer><script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="js/main.js"> </script>
   </body>
 </html>

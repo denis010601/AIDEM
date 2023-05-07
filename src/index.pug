@@ -6,6 +6,7 @@ html(lang="ru")
         meta(name="viewport", content="width=device-width, initial-scale=(1.0)")
         title Тестовое задание
         link(rel="stylesheet", href="css/main.css")
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     body
         header.header
             .container
@@ -37,8 +38,8 @@ html(lang="ru")
                     a.link.hero__link(href="") узнать подробнее
                     .col.presentation
                         picture.presentation-img--big
-                            source(srcset="img/zaglushkaT.svg" media="min-width: 375px")
-                            source(srcset="img/zaglushkaD.svg" media="(min-width: 768px)")
+                            source(srcset="img/zaglushkaT.svg" media="(min-width: 501px)")
+                            source(srcset="img/zaglushkaD.svg" media="(min-width: 568px)")
                             img(src="img/zaglushkaM.svg", alt="")
                         ul.presentation-list
                             li.presentation-item
@@ -48,25 +49,109 @@ html(lang="ru")
                                 img.presentation-img(src="img/present-img.png", alt="")
                                 span Типы планировок апартаментов
             section.maps 
-                .container.row
+                .container.row.maps__row
                     .col
-                        h2 на карте
+                        h2.title.title-h2.maps__title на карте
                         ul.maps-list 
-                            li.maps-item КРАСОТА И ЗДОРОВЬЕ
-                                span.qty 7
-                            li.maps-item МАГАЗИНЫ
-                                span.qty 7
-                            li.maps-item ОБУЧЕНИЕ
-                                span.qty 7
-                            li.maps-item ДЕТСАД
-                                span.qty 7
-                            li.maps-item ОТДЫХ, РАЗВЛЕЧЕНИЯ
-                                span.qty 7
-                    .col
+                            li.maps-item 
+                                button.maps-btn(data-maps="health") КРАСОТА И ЗДОРОВЬЕ
+                                    b.qty 7
+                            li.maps-item
+                                button.maps-btn(data-maps="shop") МАГАЗИНЫ
+                                    b.qty 7
+                            li.maps-item
+                                button.maps-btn(data-maps="lerning") ОБУЧЕНИЕ
+                                    b.qty 7
+                            li.maps-item
+                                button.maps-btn(data-maps="baby") ДЕТСАД
+                                    b.qty 7
+                            li.maps-item 
+                                button.maps-btn(data-maps="chill") ОТДЫХ, РАЗВЛЕЧЕНИЯ
+                                    b.qty 7
+                    .col.maps__col
                         .maps-overlay
-                            .maps-overlay__img
-                                img.maps-img(src="", alt="")
-                                img.maps-icon(src="", alt="")
-
-        footer
+                                .maps-img
+                                    .maps-icon.maps-icon__coffe(data-icon="chill")
+                                        img(src="img/coffee-cup.svg", alt="")
+                                    .maps-icon.maps-icon__coffe(data-icon="chill")
+                                        img(src="img/coffee-cup.svg", alt="")
+                                    .maps-icon.maps-icon__coffe(data-icon="chill")
+                                        img(src="img/coffee-cup.svg", alt="")
+                                    .maps-icon.maps-icon__shop(data-icon="shop")
+                                        img(src="img/shop-cup.svg", alt="")
+                                    .maps-icon.maps-icon__shop(data-icon="shop")
+                                        img(src="img/shop-cup.svg", alt="")
+                                    .maps-icon.maps-icon__shop(data-icon="shop")
+                                        img(src="img/shop-cup.svg", alt="")
+                                    .maps-icon.maps-icon__shop(data-icon="shop")
+                                        img(src="img/shop-cup.svg", alt="")
+                                    .maps-icon.maps-icon__mortarboard(data-icon="lerning")
+                                        img(src="img/mortarboard.svg", alt="")
+                                    .maps-icon.maps-icon__mortarboard(data-icon="lerning")
+                                        img(src="img/mortarboard.svg", alt="")
+                                    .maps-icon.maps-icon__video(data-icon="")
+                                        img(src="img/video-camera.svg", alt="chill")
+                                    .maps-icon.maps-icon__baby(data-icon="baby")
+                                        img(src="img/baby-face.svg", alt="")
+                                    .maps-icon.maps-icon__baby(data-icon="baby")
+                                        img(src="img/baby-face.svg", alt="")
+                                    .maps-icon.maps-icon__baby(data-icon="baby")
+                                        img(src="img/baby-face.svg", alt="")
+                                    .maps-icon.maps-icon__hospital(data-icon="health")
+                                        img(src="img/hospital-sign.svg", alt="")
+                                    .maps-icon.maps-icon__hospital(data-icon="health")
+                                        img(src="img/hospital-sign.svg", alt="")
+                                    .maps-icon.maps-icon__lipstick(data-icon="health")
+                                        img(src="img/lipstick.svg", alt="")
+                                    .maps-icon__jiraf
+                                        img(src="img/jitaf.svg", alt="")
+        footer.footer
             .container
+                .swiper.hang.mySwiper
+                    h2.title.title-h2.footer__title особенности работы
+                    h3.title.title-h3.footer__subtitle компании saffari estate
+                    .hang-list.swiper-wrapper
+                        .hang-item.swiper-slide
+                            span.hang__number 01
+                            h3.title.title-h3.hang__title большая база
+                            p.desc.hang__desc У нас самая большая база актуальных и эксклюзивных объектов элитной недвижимости
+                            a.link.hang__link(href=("")) Посмотреть
+                        .hang-item.swiper-slide
+                            span.hang__number 02
+                            h3.title.title-h3.hang__title надежность
+                            p.desc.hang__desc Мы гарантируем абсолютую безопасность и конфиденциальность по сделкам
+                            a.link.hang__link(href=("")) Узнать
+                        .hang-item.swiper-slide
+                            span.hang__number 03
+                            h3.title.title-h3.hang__title опыт
+                            p.desc.hang__desc Наша команда имеет огромный опыт продаж недвижимости в элитном сегменте
+                            a.link.hang__link(href=("")) Изучить
+                        .hang-item.swiper-slide
+                            span.hang__number 04
+                            h3.title.title-h3.hang__title закрытыe
+                            p.desc.hang__desc Есть объекты, которые предлагаем только мы
+                            a.link.hang__link(href=("")) Получить
+                        .hang-item.swiper-slide
+                            span.hang__number 01
+                            h3.title.title-h3.hang__title большая база
+                            p.desc.hang__desc У нас самая большая база актуальных и эксклюзивных объектов элитной недвижимости
+                            a.link.hang__link(href=("")) Посмотреть
+                        .hang-item.swiper-slide
+                            span.hang__number 02
+                            h3.title.title-h3.hang__title надежность
+                            p.desc.hang__desc Мы гарантируем абсолютую безопасность и конфиденциальность по сделкам
+                            a.link.hang__link(href=("")) Узнать
+                        .hang-item.swiper-slide
+                            span.hang__number 03
+                            h3.title.title-h3.hang__title опыт
+                            p.desc.hang__desc Наша команда имеет огромный опыт продаж недвижимости в элитном сегменте
+                            a.link.hang__link(href=("")) Изучить
+                        .hang-item.swiper-slide
+                            span.hang__number 04
+                            h3.title.title-h3.hang__title закрытыe
+                            p.desc.hang__desc Есть объекты, которые предлагаем только мы
+                            a.link.hang__link(href=("")) Получить
+                    .my-swiper-button-next
+                    .my-swiper-button-prev
+        <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+        script(src="js/main.js") 
